@@ -2,7 +2,8 @@
 
 An interactive 2D physics simulation environment built to visualize fundamental mechanics concepts, including velocity vectors )v), linear momentum conservation, and elastic collisions in an open sunset field.
 
-![Screenshot](https://github.com/user-attachments/assets/92c3f9cb-27ec-4e67-9ddf-4a06854b5601 )
+##Screenshot
+Screenshot: (https://github.com/user-attachments/assets/92c3f9cb-27ec-4e67-9ddf-4a06854b5601 )
 
 ## Try It
 Live Demo: [https://vectormechanicslab.netlify.app/]

@@ -25,3 +25,4 @@ git clone [ https://github.com/prince12xo/physics-NLM]
 cd vector-mechanics
 # Open index.html directly in any modern browser
 sky
+fjffurnf

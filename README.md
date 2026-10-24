@@ -26,4 +26,4 @@ cd vector-mechanics
 
 thank you 
 it was nice time in this project 
-it was my pleasure to work 
+

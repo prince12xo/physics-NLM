@@ -24,4 +24,4 @@ bash
 git clone [ https://github.com/prince12xo/physics-NLM] 
 cd vector-mechanics
 # Open index.html directly in any modern browser
-djcuatqble allf away frk. key boaed
+djcuatqble allf away frk. key boaedhxixjenqjdhc7cnneufowmebfycodkjwhr8g9enhello moto ndnphysicsn chemistteko buim dx egwxrfcwfyygeff3y3fh5uefyeefg54rcreff7h4r33dy7hg

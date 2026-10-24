@@ -19,7 +19,7 @@ Live Demo: [https://vectormechanicslab.netlify.app/]
 
 Running Locally
 To run this project locally on your machine or mobile terminal, follow these commands:
-
+  
 bash
 git clone [ https://github.com/prince12xo/physics-NLM] 
 cd vector-mechanics

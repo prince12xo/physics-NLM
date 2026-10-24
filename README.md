@@ -16,7 +16,7 @@ Live Demo: [https://vectormechanicslab.netlify.app/]
 - Adjustable Physics Parameters: Live sliders to modify surface friction (mu) and coefficient of restitution (e) on the fly.
 
 - Dynamic Graphics & Sunset Ambience:Immersive gradient sky, rolling lighting, particle movement trails, and responsive landscape scaling.
-
+give 
 - .
 Running Locally
 To run this project locally on your machine or mobile terminal, follow these commands:

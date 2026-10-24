@@ -23,4 +23,6 @@ To run this project locally on your machine or mobile terminal, follow these com
 bash
 git clone [ https://github.com/prince12xo/physics-NLM] 
 cd vector-mechanics
-# Open index.html directly in any modern browser
+# Open index.html directly in any modern browsere
+ekejfcufu3
+responsive

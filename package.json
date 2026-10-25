@@ -1,0 +1,19 @@
+{
+  "name": "vector-mechanics-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive 2D sandbox for velocity vectors, momentum and collisions.",
+  "scripts": {
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test tests/",
+    "check": "npm run lint && npm run format:check && npm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3"
+  }
+}

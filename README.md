@@ -1,28 +1,51 @@
 # Vector Mechanics Lab
 
-An interactive 2D physics simulation environment built to visualize fundamental mechanics concepts, including velocity vectors )v), linear momentum conservation, and elastic collisions in an open sunset field.
+An interactive 2D physics sandbox for visualizing velocity vectors (v⃗), conservation of linear momentum, and collisions in an open sunset field.
 
-##Screenshot
-Screenshot: (https://github.com/user-attachments/assets/92c3f9cb-27ec-4e67-9ddf-4a06854b5601 )
+![Screenshot](https://github.com/user-attachments/assets/92c3f9cb-27ec-4e67-9ddf-4a06854b5601)
 
-## Try It
-Live Demo: [https://vectormechanicslab.netlify.app/]
+**Live demo:** https://vectormechanicslab.netlify.app/
 
 ## Features
-- Tactile Slingshot Aiming:Drag back on any rock to aim trajectory and launch it with precise velocity control.
 
-- Real-Time Vector HUD:Live telemetry tracking maximum velocity, system momentum, and active object counts.
+- **Slingshot aiming** – drag back on any rock to aim and release to launch it.
+- **Live telemetry** – maximum speed, net system momentum and rock count.
+- **Adjustable physics** – sliders for surface friction (μ) and coefficient of restitution (e).
+- **Sunset ambience** – gradient sky, sun glow, dust trails and responsive scaling.
 
-- Adjustable Physics Parameters: Live sliders to modify surface friction (mu) and coefficient of restitution (e) on the fly.
+## Project structure
 
-- Dynamic Graphics & Sunset Ambience:Immersive gradient sky, rolling lighting, particle movement trails, and responsive landscape scaling.
-give 
-- .
-Running Locally
-To run this project locally on your machine or mobile terminal, follow these commands:
-  
-bash
-git clone [ https://github.com/prince12xo/physics-NLM] 
-cd vector-mechanics
-# Open index.html directly  in any modern browser 
-jet eocptnf
+```
+index.html          Markup and script loading order
+css/styles.css      Layout and HUD styling
+js/config.js        Tuning constants, initial layout and colour palette
+js/rock.js          Rock body: integration, friction and wall bounces
+js/physics.js       Pairwise collision response and system measurements
+js/particles.js     Dust-trail particle emission and decay
+js/renderer.js      Canvas drawing (scenery, rocks, vectors, aim guide)
+js/slingshot.js     Mouse/touch drag-to-launch input
+js/main.js          DOM wiring, settings and the animation loop
+tests/              Node tests for the simulation logic
+```
+
+The browser scripts are plain (non-module) scripts so the app still runs when `index.html` is opened directly from disk.
+
+## Running locally
+
+```bash
+git clone https://github.com/prince12xo/physics-NLM.git
+cd physics-NLM
+# Open index.html in any modern browser
+```
+
+## Development
+
+Requires Node.js 18+.
+
+```bash
+npm install
+npm run lint          # ESLint
+npm run format:check  # Prettier
+npm test              # simulation unit tests
+npm run check         # all of the above
+```

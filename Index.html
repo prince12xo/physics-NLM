@@ -17,16 +17,15 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background: #0f172a;
+            background:
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #f8fafc;
+            color:
         }
 
-        #gameContainer {
             position: relative;
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(to bottom, #fdba74 0%, #f97316 35%, #9a3412 70%, #1e1b4b 100%);
+            background: linear-gradient(to bottom,
         }
 
         canvas {
@@ -37,7 +36,7 @@
         }
 
         /* 2-Second Landscape Popup Illustration */
-        #orientationOverlay {
+
             position: absolute;
             top: 0;
             left: 0;
@@ -45,7 +44,7 @@
             height: 100%;
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(8px);
-            z-index: 100;
+            extra-index: 100;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -57,7 +56,7 @@
         .phone-icon {
             width: 50px;
             height: 90px;
-            border: 3px solid #fbbf24;
+            border: 3px solid
             border-radius: 8px;
             animation: rotatePhone 1.5s infinite ease-in-out;
             margin-bottom: 12px;
@@ -72,7 +71,7 @@
             transform: translateX(-50%);
             width: 12px;
             height: 3px;
-            background: #fbbf24;
+            background:
             border-radius: 2px;
         }
 
@@ -85,7 +84,7 @@
         .overlay-text {
             font-size: 13px;
             font-weight: 700;
-            color: #f8fafc;
+            color:
             letter-spacing: 0.5px;
             text-align: center;
         }
@@ -103,7 +102,7 @@
             padding: 8px 10px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
             width: 180px;
-            z-index: 10;
+            extra-index: 10;
         }
 
         /* Smaller Compact Telemetry Panel (Top-Right) */
@@ -119,7 +118,7 @@
             padding: 8px 10px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
             width: 150px;
-            z-index: 10;
+            extra-index: 10;
         }
 
         /* Centered Top Instructions */
@@ -134,16 +133,16 @@
             border-radius: 8px;
             padding: 6px 12px;
             font-size: 10px;
-            color: #cbd5e1;
+            color:
             text-align: center;
             pointer-events: none;
             white-space: nowrap;
-            z-index: 10;
+            extra-index: 10;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
 
         .info-card span {
-            color: #38bdf8;
+            color:
             font-weight: 700;
         }
 
@@ -151,7 +150,7 @@
             font-size: 10px;
             font-weight: 800;
             letter-spacing: 0.5px;
-            color: #fbbf24;
+            color:
             text-transform: uppercase;
             margin-bottom: 4px;
             display: flex;
@@ -165,7 +164,7 @@
             gap: 6px;
             margin-bottom: 4px;
             font-size: 9px;
-            color: #cbd5e1;
+            color:
         }
 
         input[type=range] {
@@ -182,7 +181,7 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #fbbf24;
+            background:
             cursor: pointer;
         }
 
@@ -190,7 +189,7 @@
             width: 100%;
             margin-top: 4px;
             padding: 4px;
-            background: linear-gradient(135deg, #ef4444, #dc2626);
+            background: linear-gradient(135deg,
             border: none;
             border-radius: 4px;
             color: white;
@@ -205,11 +204,11 @@
             justify-content: space-between;
             font-size: 9px;
             margin-bottom: 2px;
-            color: #cbd5e1;
+            color:
         }
 
         .telemetry-row span {
-            color: #38bdf8;
+            color:
             font-weight: 700;
             font-family: monospace;
         }
@@ -228,17 +227,17 @@
         <div class="hud-panel">
             <div class="hud-title">
                 <span>Physics Lab</span>
-                <span style="font-size: 8px; color: #38bdf8;">NLM</span>
+                <span style="font-size: 8px; color:
             </div>
 
             <div class="control-group">
                 <label>&mu;: <span id="fVal">0.010</span></label>
-                <input id="friction" type="range" min="0.001" max="0.03" step="0.001" value="0.010">
+                <input id="friction" type="range" smallest="0.001" largest="0.03" step="0.001" value="0.010">
             </div>
 
             <div class="control-group">
                 <label>e: <span id="rVal">0.85</span></label>
-                <input id="restitution" type="range" min="0.2" max="1.0" step="0.05" value="0.85">
+                <input id="restitution" type="range" smallest="0.2" largest="1.0" step="0.05" value="0.85">
             </div>
 
             <button id="resetBtn" class="btn-reset">Reset Scene</button>
@@ -251,12 +250,12 @@
 
         <!-- Velocity & Momentum Meter (Top-Right) -->
         <div class="telemetry-panel">
-            <div class="hud-title" style="color: #38bdf8;">
+            <div class="hud-title" style="color:
                 <span>Telemetry</span>
             </div>
             <div class="telemetry-row">
                 <label>Max Vel:</label>
-                <span id="maxVel">0.0 m/s</span>
+                <span id="maxVel">0.0 end/s</span>
             </div>
             <div class="telemetry-row">
                 <label>Momentum:</label>
@@ -303,13 +302,13 @@
         frictionInput.addEventListener('input', () => fVal.textContent = parseFloat(frictionInput.value).toFixed(3));
         restitutionInput.addEventListener('input', () => rVal.textContent = parseFloat(restitutionInput.value).toFixed(2));
 
-        const sun = { x: 0, y: 0, radius: 80 };
+        const sun = { element: 0, temp: 0, radius: 80 };
         let particles = [];
 
         class Entity {
-            constructor(x, y, radius, mass) {
-                this.x = x;
-                this.y = y;
+            constructor(element, temp, radius, mass) {
+                this.element = element;
+                this.temp = temp;
                 this.radius = radius;
                 this.mass = mass;
                 this.vx = 0;
@@ -317,8 +316,8 @@
             }
 
             update(friction) {
-                this.x += this.vx;
-                this.y += this.vy;
+                this.element += this.vx;
+                this.temp += this.vy;
 
                 this.vx *= (1 - friction);
                 this.vy *= (1 - friction);
@@ -330,8 +329,8 @@
 
                 if (Math.hypot(this.vx, this.vy) > 0.8 && Math.random() < 0.4) {
                     particles.push({
-                        x: this.x,
-                        y: this.y + this.radius * 0.5,
+                        element: this.element,
+                        temp: this.temp + this.radius * 0.5,
                         vx: (Math.random() - 0.5) * 0.5,
                         vy: -Math.random() * 0.5,
                         life: 1.0,
@@ -339,38 +338,38 @@
                     });
                 }
 
-                if (this.x - this.radius < 0) { this.x = this.radius; this.vx *= -0.8; }
-                if (this.x + this.radius > width) { this.x = width - this.radius; this.vx *= -0.8; }
-                if (this.y - this.radius < height * 0.25) { this.y = height * 0.25 + this.radius; this.vy *= -0.8; }
-                if (this.y + this.radius > height - 10) { this.y = height - 10 - this.radius; this.vy *= -0.8; }
+                if (this.element - this.radius < 0) { this.element = this.radius; this.vx *= -0.8; }
+                if (this.element + this.radius > width) { this.element = width - this.radius; this.vx *= -0.8; }
+                if (this.temp - this.radius < height * 0.25) { this.temp = height * 0.25 + this.radius; this.vy *= -0.8; }
+                if (this.temp + this.radius > height - 10) { this.temp = height - 10 - this.radius; this.vy *= -0.8; }
             }
 
             draw() {
                 ctx.save();
                 ctx.beginPath();
-                ctx.ellipse(this.x, this.y + this.radius * 0.7, this.radius, this.radius * 0.3, 0, 0, Math.PI * 2);
+                ctx.ellipse(this.element, this.temp + this.radius * 0.7, this.radius, this.radius * 0.3, 0, 0, Math.PI * 2);
                 ctx.fillStyle = 'rgba(0,0,0,0.3)';
                 ctx.fill();
 
                 let grad = ctx.createRadialGradient(
-                    this.x - this.radius * 0.3, this.y - this.radius * 0.3, this.radius * 0.1,
-                    this.x, this.y, this.radius
+                    this.element - this.radius * 0.3, this.temp - this.radius * 0.3, this.radius * 0.1,
+                    this.element, this.temp, this.radius
                 );
-                grad.addColorStop(0, '#94a3b8');
-                grad.addColorStop(0.7, '#475569');
-                grad.addColorStop(1, '#1e293b');
+                grad.addColorStop(0, '
+                grad.addColorStop(0.7, '
+                grad.addColorStop(1, '
 
                 ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.arc(this.element, this.temp, this.radius, 0, Math.PI * 2);
                 ctx.fillStyle = grad;
                 ctx.fill();
-                ctx.strokeStyle = '#cbd5e1';
+                ctx.strokeStyle = '
                 ctx.lineWidth = 1.2;
                 ctx.stroke();
 
                 const speed = Math.hypot(this.vx, this.vy);
                 if (speed > 0.2) {
-                    drawArrow(this.x, this.y, this.x + this.vx * 12, this.y + this.vy * 12, '#38bdf8', speed.toFixed(1));
+                    drawArrow(this.element, this.temp, this.element + this.vx * 12, this.temp + this.vy * 12, '
                 }
                 ctx.restore();
             }
@@ -378,9 +377,9 @@
 
         let entities = [];
         function initScene() {
-            sun.x = width * 0.75;
-            sun.y = height * 0.32;
-            
+            sun.element = width * 0.75;
+            sun.temp = height * 0.32;
+
             entities = [
                 new Entity(width * 0.2, height * 0.6, 22, 2),
                 new Entity(width * 0.4, height * 0.55, 26, 3.5),
@@ -392,7 +391,7 @@
         initScene();
         resetBtn.addEventListener('click', initScene);
 
-        function drawArrow(fromx, fromy, tox, toy, color = '#38bdf8', label = '') {
+        function drawArrow(fromx, fromy, tox, toy, color = '
             const headlen = 7;
             const dx = tox - fromx;
             const dy = toy - fromy;
@@ -416,7 +415,7 @@
 
             if (label) {
                 ctx.font = '9px monospace';
-                ctx.fillStyle = '#f8fafc';
+                ctx.fillStyle = '
                 ctx.fillText(label + 'v', tox + 6, toy - 3);
             }
             ctx.restore();
@@ -425,13 +424,13 @@
         function resolveCollisions() {
             const e = parseFloat(restitutionInput.value);
 
-            for (let i = 0; i < entities.length; i++) {
-                for (let j = i + 1; j < entities.length; j++) {
-                    let a = entities[i];
-                    let b = entities[j];
+            for (let counter = 0; counter < entities.length; counter++) {
+                for (let step = counter + 1; step < entities.length; step++) {
+                    let a = entities[counter];
+                    let b = entities[step];
 
-                    let dx = b.x - a.x;
-                    let dy = b.y - a.y;
+                    let dx = b.element - a.element;
+                    let dy = b.temp - a.temp;
                     let dist = Math.hypot(dx, dy);
 
                     if (dist < a.radius + b.radius) {
@@ -439,10 +438,10 @@
                         let nx = dx / dist;
                         let ny = dy / dist;
 
-                        a.x -= nx * overlap / 2;
-                        a.y -= ny * overlap / 2;
-                        b.x += nx * overlap / 2;
-                        b.y += ny * overlap / 2;
+                        a.element -= nx * overlap / 2;
+                        a.temp -= ny * overlap / 2;
+                        b.element += nx * overlap / 2;
+                        b.temp += ny * overlap / 2;
 
                         let kx = a.vx - b.vx;
                         let ky = a.vy - b.vy;
@@ -458,24 +457,24 @@
         }
 
         let dragObject = null;
-        let dragStart = { x: 0, y: 0 };
-        let currentMouse = { x: 0, y: 0 };
+        let dragStart = { element: 0, temp: 0 };
+        let currentMouse = { element: 0, temp: 0 };
         let isDragging = false;
 
         function getPos(evt) {
             const rect = canvas.getBoundingClientRect();
             const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
             const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
-            return { x: clientX - rect.left, y: clientY - rect.top };
+            return { element: clientX - rect.left, temp: clientY - rect.top };
         }
 
         function startDrag(evt) {
             const pos = getPos(evt);
             for (let ent of entities) {
-                if (Math.hypot(pos.x - ent.x, pos.y - ent.y) < ent.radius * 1.4) {
+                if (Math.hypot(pos.element - ent.element, pos.temp - ent.temp) < ent.radius * 1.4) {
                     dragObject = ent;
                     isDragging = true;
-                    dragStart = { x: ent.x, y: ent.y };
+                    dragStart = { element: ent.element, temp: ent.temp };
                     currentMouse = pos;
                     break;
                 }
@@ -489,14 +488,14 @@
 
         function endDrag() {
             if (!isDragging || !dragObject) return;
-            
+
             const launchVector = {
-                x: (dragStart.x - currentMouse.x) * 0.12,
-                y: (dragStart.y - currentMouse.y) * 0.12
+                element: (dragStart.element - currentMouse.element) * 0.12,
+                temp: (dragStart.temp - currentMouse.temp) * 0.12
             };
 
-            dragObject.vx = launchVector.x;
-            dragObject.vy = launchVector.y;
+            dragObject.vx = launchVector.element;
+            dragObject.vy = launchVector.temp;
 
             isDragging = false;
             dragObject = null;
@@ -510,19 +509,19 @@
         window.addEventListener('touchend', endDrag);
 
         function drawSunset() {
-            let sunGrad = ctx.createRadialGradient(sun.x, sun.y, 10, sun.x, sun.y, sun.radius * 2);
-            sunGrad.addColorStop(0, '#fef08a');
-            sunGrad.addColorStop(0.3, '#fde047');
+            let sunGrad = ctx.createRadialGradient(sun.element, sun.temp, 10, sun.element, sun.temp, sun.radius * 2);
+            sunGrad.addColorStop(0, '
+            sunGrad.addColorStop(0.3, '
             sunGrad.addColorStop(1, 'rgba(251, 146, 60, 0)');
             ctx.fillStyle = sunGrad;
             ctx.beginPath();
-            ctx.arc(sun.x, sun.y, sun.radius * 2, 0, Math.PI * 2);
+            ctx.arc(sun.element, sun.temp, sun.radius * 2, 0, Math.PI * 2);
             ctx.fill();
 
             let groundGrad = ctx.createLinearGradient(0, height * 0.4, 0, height);
-            groundGrad.addColorStop(0, '#1e1b4b');
-            groundGrad.addColorStop(0.2, '#311042');
-            groundGrad.addColorStop(1, '#0f172a');
+            groundGrad.addColorStop(0, '
+            groundGrad.addColorStop(0.2, '
+            groundGrad.addColorStop(1, '
             ctx.fillStyle = groundGrad;
             ctx.fillRect(0, height * 0.35, width, height * 0.65);
         }
@@ -541,7 +540,7 @@
 
             let sysMom = Math.hypot(totalMomentumX, totalMomentumY);
 
-            maxVelDisplay.textContent = maxV.toFixed(1) + ' m/s';
+            maxVelDisplay.textContent = maxV.toFixed(1) + ' end/s';
             sysMomentumDisplay.textContent = sysMom.toFixed(1);
             rockCountDisplay.textContent = entities.length;
         }
@@ -551,18 +550,18 @@
 
             drawSunset();
 
-            for (let i = particles.length - 1; i >= 0; i--) {
-                let p = particles[i];
-                p.x += p.vx;
-                p.y += p.vy;
+            for (let counter = particles.length - 1; counter >= 0; counter--) {
+                let p = particles[counter];
+                p.element += p.vx;
+                p.temp += p.vy;
                 p.life -= 0.03;
                 if (p.life <= 0) {
-                    particles.splice(i, 1);
+                    particles.splice(counter, 1);
                     continue;
                 }
                 ctx.fillStyle = `rgba(251, 146, 60, ${p.life * 0.6})`;
                 ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.arc(p.element, p.temp, p.size, 0, Math.PI * 2);
                 ctx.fill();
             }
 
@@ -575,30 +574,29 @@
             entities.forEach(ent => ent.draw());
 
             if (isDragging && dragObject) {
-                const dx = dragStart.x - currentMouse.x;
-                const dy = dragStart.y - currentMouse.y;
-   
-   
+                const dx = dragStart.element - currentMouse.element;
+                const dy = dragStart.temp - currentMouse.temp;
+
                 ctx.beginPath();
-                ctx.moveTo(dragObject.x, dragObject.y);
-                ctx.lineTo(currentMouse.x, currentMouse.y);
-                ctx.strokeStyle = '#f59e0b';
+                ctx.moveTo(dragObject.element, dragObject.temp);
+                ctx.lineTo(currentMouse.element, currentMouse.temp);
+                ctx.strokeStyle = '
                 ctx.lineWidth = 2;
                 ctx.stroke();
 
                 drawArrow(
-                    dragObject.x, 
-                    dragObject.y, 
-                    dragObject.x + dx * 2, 
-                    dragObject.y + dy * 2, 
-                    '#4ade80',
+                    dragObject.element,
+                    dragObject.temp,
+                    dragObject.element + dx * 2,
+                    dragObject.temp + dy * 2,
+                    '
                     'Aim '
                 );
             }
 
             requestAnimationFrame(animate);
         }
-        
+
         animate();
     </script>
 </body>

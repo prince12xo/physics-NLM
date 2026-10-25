@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Sunset Vector Mechanics - Physics Lab</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="lab">
+      <div id="orientationOverlay">
+        <div class="phone-icon"></div>
+        <div class="overlay-text">ROTATE DEVICE TO LANDSCAPE</div>
+      </div>
+
+      <div class="panel panel--controls">
+        <div class="panel-title">
+          <span>Physics Lab</span>
+          <span class="panel-badge">NLM</span>
+        </div>
+
+        <div class="control-group">
+          <label for="friction">&mu;: <span id="frictionValue">0.010</span></label>
+          <input id="friction" type="range" min="0.001" max="0.03" step="0.001" value="0.010" />
+        </div>
+
+        <div class="control-group">
+          <label for="restitution">e: <span id="restitutionValue">0.85</span></label>
+          <input id="restitution" type="range" min="0.2" max="1.0" step="0.05" value="0.85" />
+        </div>
+
+        <button id="resetBtn" class="btn-reset" type="button">Reset Scene</button>
+      </div>
+
+      <div class="panel panel--instructions">
+        🎯 <span>Pull back</span> on rocks to launch | 🏹 Vectors show <span>v&#x20D7;</span>
+      </div>
+
+      <div class="panel panel--telemetry">
+        <div class="panel-title panel-title--accent">
+          <span>Telemetry</span>
+        </div>
+        <div class="telemetry-row">
+          <label>Max Vel:</label>
+          <span id="maxSpeed">0.0 m/s</span>
+        </div>
+        <div class="telemetry-row">
+          <label>Momentum:</label>
+          <span id="momentum">0.0</span>
+        </div>
+        <div class="telemetry-row">
+          <label>Rocks:</label>
+          <span id="rockCount">5</span>
+        </div>
+      </div>
+
+      <canvas id="simCanvas"></canvas>
+    </div>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/rock.js" defer></script>
+    <script src="js/physics.js" defer></script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/renderer.js" defer></script>
+    <script src="js/slingshot.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
